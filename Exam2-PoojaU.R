@@ -18,6 +18,9 @@ fulldate=str_c(yy,mm,dd, sep=" /")
 fulldate=as.character(fulldate)
 fulldate
 
+t2$date<-as.POSIXct(strptime(x=t2$date, format="%m/%d/%y", tz="America/New_York"))
+#East Coast-New York
+
 ##section 2
 library(data.table)
 library(tidyverse)
@@ -47,7 +50,7 @@ F4=read_csv(file="aurelia_15minCell_statareas.txt")
 A=F4[F4$year=="2012",]
 A
 
-subset1=subset(A=F4, year=="2012")
+subset1=subset(F4, year=="2012")
 subset1
 save(subset1, file="newaurelia_data.Rdata")
 
@@ -56,7 +59,7 @@ save(subset1, file="newaurelia_data.Rdata")
 10.
 load(file="test2_deep.Rdata")
 load(file="test2_mid.Rdata")
-load(file="test2_shallow.Rdata"
+load(file="test2_shallow.Rdata")
 S.df=as.data.frame(shallow)
 D.df=as.data.frame(deep)
 M.df=as.data.frame(mid)
