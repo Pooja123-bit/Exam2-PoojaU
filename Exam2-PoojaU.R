@@ -83,20 +83,25 @@ merge1
 
 ##Section 4
 
+13.
 Test= data("batting.2008")
 
+14.
 Test=batting.2008
 HR=tapply(X=Test$HR, INDEX= list(Test$teamID), FUN = sum)
 HR
 
+15.
 stats.team=aggregate(x=Test [,c("AB", "H","BB","2B","HR")], by=list(Test$teamID),FUN=sum)
 stats.team
 
+16.
 sum.team = Test %>%  group_by(teamID) %>% summarize (HRsum = sum(HR), HRmean=mean(HR),HRsd=sd(HR))
 sum.team
 
 
 ##bonus
+17.
 
 fs<- fish[,c("transect.id","area_fac","depth_fac","parcel.id", "parcel.density.m3","parcel.length.m")]
 
