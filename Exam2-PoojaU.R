@@ -69,16 +69,16 @@ Combined
 load(file="t2-1.Rdata")
 load(file="t2-2.Rdata")
 
-t2_1.df=as.data.frame(t2)
-t2_2.df=as.data.frame(t2.1)
+T2.1.df=as.data.frame(t2)
+T2.2.df=as.data.frame(t2.1)
 ##join
-join1=full_join(t2_1.df, t2_2.df, by = "parcel.id")
-join1
+Join1=full_join(T2.1.df, T2.2.df, by = "parcel.id")
+Join1
 
 12.
 ##merge
-merge1=merge(t2_1.df,t2_1.df,by="parcel.id")
-merge1
+Merge1=merge(T2.1.df, T2.2.df,by="parcel.id")
+Merge1
 
 
 ##Section 4
